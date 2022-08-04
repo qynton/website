@@ -1,0 +1,109 @@
+
+<html class="index">
+
+  <head>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  
+  <body>
+
+  <?php
+
+      //server credentiols
+      $servername = "localhost";
+      $username = "root";
+      $password = "Ivy@th3n@";
+      $dbName = "webdatabase";
+
+      //conect to server
+      $conn = mysqli_connect($servername, $username, $password, $dbName);
+
+
+      //check connection
+
+      if(!$conn){
+
+        echo 'Connection error: ' . myqsl_connect_error();
+
+      }
+      
+
+  
+
+    
+    ?>
+
+      <!-- This is the code that is responsable for the header on all of the pages, including the logo -->
+    <div class="Main_Header">
+      <img class="Logo" src="https://www.cambridgenetwork.co.uk/civicrm/contact/imagefile?photo=heron_234x234_93d6472290bc2b889d10b24bc20ea3b2_b3dccc063e42b057f426148a7cd043ae.jpg">
+      <h1 class="Uni_name" title="Anglia Ruskin University" >Anglia Ruskin University</h1> 
+    </div>
+
+
+  <!-- This is responsable for the navigation bar that is on all of the pages -->
+
+  <nav class="Navbar">
+
+    <a href="index.php" class="NavElement">Home</a>
+    <a href="staff.php" class="NavElement">Staff</a>
+    <a href="students.php" class="NavElement">Student</a>
+    <a href="course.php" class="NavElement">Course</a>
+    <a class="NavElement">LogIn</a>
+
+  </nav>
+
+
+      
+     
+    
+      <div>
+        <h1 class="home_h1">What is ARU</h1>
+        <br>
+        <p class="home_p">
+        ARU is an innovative global university with students from 185 countries coming to study with us. We've once again been named as one of the top 350 institutions in the world in The Times Higher Education World University Rankings 2022 and one of the top 40 universities in the UK.
+        </p>
+        <br>
+        <img class="home_img" src="https://static.studyin-uk.in/assets/study-guide/in-blog-image-study-at-anglia-ruskin.jpg">
+        <br>
+        <p class="home_p">
+        We were named as one of the top five UK universities for education and sports science courses in the Guardian League Table 2022.
+        </p>
+        <br>
+        <p class="home_p">
+        We have been named one of the top 350 institutions in the world in the Times Higher Education World University Rankings 2022, for the sixth successive year – and one of the top 40 universities in the UK. We're also listed in the top 15% for social inclusion in The Times Good University Guide 2022.
+
+        Students are at the heart of our University, and we're delighted that our final-year undergraduates also rate their educational experience highly
+        </p>
+      </div>
+
+
+      <div>
+      <img alt="Student" src="data:image/png;base64,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">
+      <img alt="Staff" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL0GGMkcMfFthxDUEqh8WLD7EKbme6RcsrtQ&usqp=CAU">
+      <img alt="Course" src="data:image/png;base64,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">
+      </div>
+      
+    <footer>
+      <p class="footer">Contact us at +44 (0)1245493131 <br>or on our social media</p>
+      <a alt="facebook.com/angliaruskin" class="social_icon" href="https://www.facebook.com/angliaruskin"><img class="social_icon" src="data:image/jpeg;base64,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"></a>
+      <a alt="twitter.com/angliaruskin" class="social_icon" href="https://twitter.com/angliaruskin"><img class="social_icon" src="data:image/png;base64,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"></a>
+    </footer>
+
+
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+</html>
+
