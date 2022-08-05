@@ -73,7 +73,7 @@
   
             <div class='IndexText'><a class='Front_pg_text'>".$row['name']."<br>".$row['subject']."<br>".$row['email']."<br>".$row['phone']." </a></div>
                          
-              <form action='delete.php' method='post'>
+              <form action='deleteStudent.php' method='post'>
                   <input type='hidden name='id' value='".$row['id']."'>
               <th> <input type='submit' name='delete' class='btnDelete' value='Delete'> </th>
               
