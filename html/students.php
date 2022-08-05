@@ -67,15 +67,18 @@
           echo "
           
             <div class='IndexInfo'>
-
             <div class='IndexPic'>
             <img class='Front_pg_pic' src='".$row['picture']."'>
             </div>
   
-            <div class='IndexText'><a class='Front_pg_text'>".$row['name']."<br>".$row['subject']."<br>".$row['email']."<br>".$row['phone']."</a></div>
-
+            <div class='IndexText'><a class='Front_pg_text'>".$row['name']."<br>".$row['subject']."<br>".$row['email']."<br>".$row['phone']." </a></div>
+                         
+              <form action='delete.php' method='post'>
+                  <input type='hidden name='id' value='".$row['id']."'>
+              <th> <input type='submit' name='delete' class='btnDelete' value='Delete'> </th>
+              
+              </form>
             </div>
-          ";
 
         }
         
